@@ -1,0 +1,23 @@
+include ../../../src/pug/base/meta
+include ../../../src/pug/mixin
+
+doctype html
+html
+  head
+    +meta(
+      "About | サンプルサイト",
+      "サンプルサイトの説明文です。",
+      "/common/images/ogp.png",
+      "https://example.com"
+    )
+
+    include ../../../src/pug/base/head-assets
+  body
+    include ../../../src/pug/base/header
+
+    h1 about
+    p This is a test page.
+    +img("about/about.jpg", "Dummy Image")
+
+    include ../../../src/pug/base/footer
+    include ../../../src/pug/base/body-append
