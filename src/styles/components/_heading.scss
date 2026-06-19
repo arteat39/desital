@@ -1,0 +1,12 @@
+.c-heading {
+  &__wrap {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+  }
+  &__link {
+    color: var(--link-color);
+    text-decoration: underline;
+    font-size: 0.875rem;
+  }
+}

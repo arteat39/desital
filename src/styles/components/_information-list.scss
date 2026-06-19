@@ -1,0 +1,21 @@
+.c-information {
+  &__list {
+    margin-top: 16px;
+    margin-left: 24px;
+    list-style: inherit;
+
+    > * + * {
+      margin-top: 4px;
+    }
+
+    li {
+      list-style: inherit;
+    }
+
+    a {
+      color: var(--link-color);
+      text-decoration: underline;
+      font-size: 0.875rem;
+    }
+  }
+}

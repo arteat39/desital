@@ -1,6 +1,8 @@
 include ../../src/pug/base/meta
 include ../../src/pug/mixin
 include ../../src/pug/data/top_data
+//- data
+include ../../src/pug/data/information_data
 
 doctype html
 html
@@ -14,25 +16,28 @@ html
 
     include ../../src/pug/base/head-assets
   body
-    include ../../src/pug/base/header
-    h1 Hello, Gulp with Pug & SCSS!
-    p This is a test page.
+    //- include ../../src/pug/base/header
 
-    - const name = "John"
-    p Hello !{name}
+    main.l-main
 
-    .swiper
-      .swiper-wrapper
-        - for (var i = 0; i < 9; i++)
-          .swiper-slide
-            img(src=`https://picsum.photos/800/400?random=${i}`, alt="")
+      section.l-section
+        +c-heading('h2', '重要なお知らせ')
 
-    .p-top__img
-      +img('dummy.jpg', 'ダミー画像', 1200, 300)
+        ul.c-information__list
+          each item in information_data
+            li
+              a(href=item.link)
+                |!{item.title}
 
-    .p-top__card-wrap
-      each card in topData.card
-        +card(card.title, card.imgData, card.tags, card.link, card.blank)
 
-    include ../../src/pug/base/footer
+      section.l-section
+        +c-heading('h2', 'トピックス')
+
+
+      section.l-section
+        +c-heading('h2', '新着・更新', '/')
+
+
+
+    //- include ../../src/pug/base/footer
     include ../../src/pug/base/body-append

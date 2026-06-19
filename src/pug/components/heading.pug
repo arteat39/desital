@@ -1,0 +1,7 @@
+mixin c-heading(level, text, link)
+  .c-heading__wrap
+    #{level}.c-heading__title
+      |!{text}
+    if link
+      a(href=link).c-heading__link
+        |一覧を見る
