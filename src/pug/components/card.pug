@@ -1,0 +1,10 @@
+mixin c-card(title, description, link, blank)
+  a(href=link, target=blank ? '_blank' : '_self').c-card__wrap
+    .c-card__img
+      img(src="https://placehold.jp/150x150.png")
+    .c-card__title
+      |!{title}
+    if description
+      .c-card__description
+        |!{description}
+

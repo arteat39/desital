@@ -80,6 +80,8 @@ const copyImages = () => {
 const serve = () => {
   browserSync.init({
     server: { baseDir: "dist" },
+    port: 3000,
+    ui: { port: 3001 },
     open: true,
     notify: false,
     injectChanges: true,
