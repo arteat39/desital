@@ -1,21 +1,21 @@
 @use 'mixin';
 
-h1 {
-  font-size: 4rem;
-  @include mixin.mobile {
-    color: red;
+.p-topics {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
   }
 }
 
-.p-top {
-  &__img {
-    max-width: 400px;
-    margin-inline: auto;
-    margin-top: 40px;
+.p-news {
+  &__list {
+    gap: 16px;
   }
-  &__card-wrap {
-    margin-top: 60px;
-    margin-inline: 16px;
+}
+
+.p-dashboard {
+  &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;

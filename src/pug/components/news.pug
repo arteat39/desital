@@ -1,0 +1,11 @@
+mixin c-news(title, tags, date, link, blank)
+  a(href=link, target=blank ? '_blank' : '_self').c-news__wrap
+    .c-news__title
+      |!{title}
+    .c-news__tags
+      each tag in tags
+        span.c-news__tag= tag
+    .c-news__date
+      |!{date}
+
+

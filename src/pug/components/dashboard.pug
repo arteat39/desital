@@ -1,0 +1,10 @@
+mixin c-dashboard(title, description, link, blank)
+  a(href=link, target=blank ? '_blank' : '_self').c-dashboard__wrap
+    .c-dashboard__img
+      img(src="https://placehold.jp/150x150.png")
+    .c-dashboard__title
+      |!{title}
+    if description
+      .c-dashboard__description
+        |!{description}
+
